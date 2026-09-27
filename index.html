@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yajas Malhotra - Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- this div is just for the moving background, JS fills it in -->
+<div id="bg-animation" class="bg-animation"></div>
+
+<header class="nav-bar">
+  <nav class="flex items-center justify-between px-6 py-4">
+    <a href="#hero" class="site-logo">YM</a>
+    <ul class="hidden md:flex gap-8 nav-list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- top intro section -->
+  <section id="hero" class="max-w-[800px] mx-auto pt-16 pb-12 px-6 text-center">
+    <p class="tagline">CS student & competitive programmer</p>
+    <h1 class="name-heading">Yajas Malhotra</h1>
+    <p class="short-intro">
+      Building intuition for algorithms, one problem at a time.
+      Aiming to turn that into a career in quantitative development.
+    </p>
+    <div class="flex justify-center gap-4 flex-wrap mb-10">
+      <a href="https://github.com/YajasM" target="_blank" rel="noopener" class="button button-fill">View GitHub</a>
+      <a href="#contact" class="button button-outline">Get in touch</a>
+    </div>
+
+    <img src="images/profile.png" alt="Portrait of Yajas Malhotra" class="profile-photo">
+    <p class="cf-rating">942 Codeforces rating</p>
+  </section>
+
+  <!-- about me section -->
+  <section id="about" class="max-w-[800px] mx-auto pt-14 pb-14 px-6 border-t border-[#2A2F3A]">
+    <h2 class="heading">About</h2>
+    <p>
+      I grew up in Delhi and moved to Bangalore for college. I'm a computer
+      science student splitting my time between two programs: a B.Sc. in
+      Computer Science at BITS Pilani, and the UGP in AI & Business at
+      Scaler School of Technology.
+    </p>
+    <p>
+      Right now I'm sharpening my fundamentals in Data Structures &
+      Algorithms and spend a lot of my free time on competitive programming.
+      Long-term, I want to work as a quant developer. The mix of C++
+      performance, math and markets is what pulls me in, alongside a
+      growing interest in AI/ML.
+    </p>
+    <ul class="about-info">
+      <li><strong>Based in:</strong> Bangalore, originally from Delhi</li>
+      <li><strong>Studying:</strong> B.Sc. CS (BITS Pilani) & UGP AI & Business (Scaler)</li>
+      <li><strong>Focused on:</strong> DSA, competitive programming, C++</li>
+      <li><strong>Aiming for:</strong> Quantitative development</li>
+    </ul>
+  </section>
+
+  <!-- skills section -->
+  <section id="skills" class="max-w-[800px] mx-auto pt-14 pb-14 px-6 border-t border-[#2A2F3A]">
+    <h2 class="heading">Skills</h2>
+
+    <p class="skill-title">Languages</p>
+    <!-- each skill has 5 little dots below it to show how
+         comfortable I am with it, filled dot = more comfortable -->
+    <div class="flex flex-wrap gap-3 mb-6">
+      <span class="skill-box">
+        C++
+        <span class="skill-dots">
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+      <span class="skill-box">
+        Python
+        <span class="skill-dots">
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+      <span class="skill-box">
+        Java
+        <span class="skill-dots">
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+      <span class="skill-box">
+        HTML
+        <span class="skill-dots">
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+      <span class="skill-box">
+        CSS
+        <span class="skill-dots">
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot dot-on"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+    </div>
+
+    <p class="skill-title">Currently learning</p>
+    <div class="flex flex-wrap gap-3 mb-6">
+      <span class="skill-box">Data Structures & Algorithms</span>
+    </div>
+  </section>
+
+  <!-- projects section -->
+  <section id="projects" class="max-w-[800px] mx-auto pt-14 pb-14 px-6 border-t border-[#2A2F3A]">
+    <h2 class="heading">Projects</h2>
+    <p class="note-text">Small, practical builds while I learn HTML & CSS properly.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="projects/cafe-landing-page/index.html" target="_blank" class="project-box">
+        <h3>Café Landing Page</h3>
+        <p>
+          A responsive landing page concept for a local café, built as a
+          freelance-style practice project. Nav bar, hero section, a menu
+          grid and a footer, all laid out with Flexbox.
+        </p>
+        <p class="tags">HTML, CSS, Flexbox</p>
+        <p class="status">Completed</p>
+      </a>
+
+      <a href="projects/recipe-card/index.html" target="_blank" class="project-box">
+        <h3>Responsive Recipe Card</h3>
+        <p>
+          A single recipe card that lays image and info side by side on
+          desktop, then stacks them on mobile with a media query. Practice
+          for the box model and responsive layout.
+        </p>
+        <p class="tags">HTML, CSS, Flexbox</p>
+        <p class="status">Completed</p>
+      </a>
+
+      <a href="projects/pricing-cards/index.html" target="_blank" class="project-box">
+        <h3>Pricing Cards Layout</h3>
+        <p>
+          Three pricing plans side by side with the middle plan highlighted,
+          built with Flexbox and a checklist of features per plan.
+        </p>
+        <p class="tags">HTML, CSS, Flexbox</p>
+        <p class="status">Completed</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- journey / timeline section -->
+  <section id="journey" class="max-w-[800px] mx-auto pt-14 pb-14 px-6 border-t border-[#2A2F3A]">
+    <h2 class="heading">Journey</h2>
+
+    <ul class="timeline">
+      <li class="timeline-entry">
+        <p class="entry-date">2026 - 2030 (In progress)</p>
+        <h3>UGP, AI & Business</h3>
+        <p>Scaler School of Technology</p>
+      </li>
+      <li class="timeline-entry">
+        <p class="entry-date">2026 - 2029 (In progress)</p>
+        <h3>B.Sc. Computer Science</h3>
+        <p>BITS Pilani</p>
+      </li>
+      <li class="timeline-entry">
+        <p class="entry-date">2025 - 2026</p>
+        <h3>Class 12, CBSE - 85.6%</h3>
+        <p>Ahlcon Public School, Delhi</p>
+      </li>
+      <li class="timeline-entry">
+        <p class="entry-date">2025-2026</p>
+        <h3>Event Head, Silico Battles (Chess & Respawn)</h3>
+        <p>Led two events, Chess and Respawn (console gaming), at my school's tech fest.</p>
+      </li>
+      <li class="timeline-entry">
+        <p class="entry-date">2024 - 2025</p>
+        <h3>GK Club Secretary</h3>
+        <p>Ahlcon Public School</p>
+      </li>
+      <li class="timeline-entry">
+        <p class="entry-date">2023 - 2024</p>
+        <h3>Class 10, CBSE - 91.17%</h3>
+        <p>Ahlcon Public School, Delhi</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- contact section -->
+  <section id="contact" class="max-w-[800px] mx-auto pt-14 pb-14 px-6 border-t border-[#2A2F3A]">
+    <h2 class="heading">Contact</h2>
+    <p class="note-text">Reach out about internships, collaboration, or just to talk competitive programming.</p>
+
+    <div class="flex flex-col gap-3 mb-8">
+      <a href="mailto:yajasmalhotra098@gmail.com" class="contact-box">Email: yajasmalhotra098@gmail.com</a>
+      <a href="https://github.com/YajasM" target="_blank" rel="noopener" class="contact-box">GitHub: github.com/YajasM</a>
+      <a href="https://www.linkedin.com/in/yajas-malhotra-686032261/" target="_blank" rel="noopener" class="contact-box">LinkedIn: yajas-malhotra</a>
+    </div>
+
+    <form class="message-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="button button-fill">Send message</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer max-w-[800px] mx-auto pt-8 pb-8 px-6 flex justify-between flex-wrap gap-2">
+  <p>© 2026 Yajas Malhotra</p>
+  <p>Built with HTML, CSS & Tailwind CSS</p>
+</footer>
+
+<script>
+  // turns on the moving line background behind everything
+  // colors match the site theme (dark bg + yellow lines)
+  VANTA.NET({
+    el: "#bg-animation",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xe3a93f,
+    backgroundColor: 0x14171e,
+    points: 8.00,
+    maxDistance: 20.00,
+    spacing: 18.00
+  })
+</script>
+
+</body>
+</html>

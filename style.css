@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  color: #ECE6D6;
+  line-height: 1.6;
+  background: #14171E;
+}
+
+/* this div sits behind everything and the JS fills it
+   with the moving dot/line background */
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* navbar */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  background: #14171E;
+  border-bottom: 1px solid #2A2F3A;
+}
+
+.site-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: #E3A93F;
+  font-size: 1.1rem;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.nav-list a {
+  color: #9C9686;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: #E3A93F;
+}
+
+/* hero / top intro section */
+/* max-width, centering and spacing for this section
+   are done with Tailwind classes in the HTML */
+.tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #4FA98C;
+}
+
+.name-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.short-intro {
+  color: #9C9686;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+
+/* buttons, used for both the hero buttons and the
+   send message button in the contact form */
+.button {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  border: 1px solid #E3A93F;
+  display: inline-block;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.button-fill {
+  background: #E3A93F;
+  color: #14171E;
+}
+
+.button-fill:hover {
+  background: #C98A2A;
+}
+
+.button-outline {
+  color: #E3A93F;
+}
+
+.button-outline:hover {
+  background: #E3A93F;
+  color: #14171E;
+}
+
+.profile-photo {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2A2F3A;
+}
+
+.cf-rating {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #4FA98C;
+}
+
+/* every section on the page (About, Skills, Projects, Journey,
+   Contact) shares this heading + note style. the max-width,
+   centering, padding and top border come from Tailwind classes
+   directly on the <section> tags in the HTML */
+.heading {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.25rem;
+}
+
+.note-text {
+  color: #9C9686;
+  margin-top: -0.5rem;
+}
+
+/* about section */
+.about-info {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.about-info li {
+  padding: 0.6rem 0;
+  border-top: 1px solid #2A2F3A;
+}
+
+/* skills section */
+.skill-title {
+  font-family: 'JetBrains Mono', monospace;
+  color: #9C9686;
+  margin-bottom: 0.5rem;
+}
+
+.skill-box {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #2A2F3A;
+  border-radius: 12px;
+  background: #1B1F28;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* the little row of dots under each skill, showing
+   how comfortable I am with it */
+.skill-dots {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2A2F3A;
+}
+
+.dot-on {
+  background: #E3A93F;
+}
+
+/* projects section, the grid layout is Tailwind classes
+   on the <div> in the HTML */
+.project-box {
+  display: block;
+  background: #1B1F28;
+  border: 1px solid #2A2F3A;
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.project-box:hover {
+  border-color: #E3A93F;
+}
+
+.project-box h3 {
+  font-family: 'Fraunces', serif;
+  margin-top: 0;
+}
+
+.tags {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #9C9686;
+}
+
+.status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #4FA98C;
+}
+
+/* journey / timeline section */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-entry {
+  border-left: 3px solid #E3A93F;
+  padding: 0.5rem 0 1.5rem 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.entry-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #4FA98C;
+  margin: 0 0 0.2rem 0;
+}
+
+.timeline-entry h3 {
+  font-family: 'Fraunces', serif;
+  margin: 0 0 0.2rem 0;
+}
+
+.timeline-entry p {
+  margin: 0;
+  color: #9C9686;
+}
+
+/* contact section, the list layout above the form is
+   Tailwind classes on the <div> in the HTML */
+.contact-box {
+  padding: 0.75rem;
+  border: 1px solid #2A2F3A;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.contact-box:hover {
+  background: #1B1F28;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message-form label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #9C9686;
+  margin-top: 0.5rem;
+}
+
+.message-form input,
+.message-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #2A2F3A;
+  border-radius: 4px;
+  font-family: 'Work Sans', sans-serif;
+  background: #1B1F28;
+  color: #ECE6D6;
+}
+
+.message-form button {
+  margin-top: 1rem;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* footer, the flex layout and spacing come from
+   Tailwind classes on the <footer> in the HTML,
+   this just sets the color/font */
+.footer {
+  color: #9C9686;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
