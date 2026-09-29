@@ -7,6 +7,8 @@ Personal portfolio for Yajas Malhotra, a CS student at BITS Pilani
 Business), competitive programmer, and aspiring quant developer.
 Built while learning HTML, CSS and Tailwind CSS from scratch.
 
+Link : https://yajasm.github.io/Web-Dev-Project/
+
 ## Technologies
 
 - HTML
